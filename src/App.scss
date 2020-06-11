@@ -1,0 +1,43 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #6761a8;
+	color: #2a2d34;
+	font-family: "Helvetica", "Verdana", sans-serif;
+	line-height: 1.7;
+}
+
+.container {
+	background-color: #ffffff;
+	font-size: 1em;
+	margin: 2em 10em 0 10em;
+	padding: 1em;
+	border-radius: 2em;
+}
+
+.list {
+	&__add {
+		margin: 0;
+		padding-left: 2em;
+		border-style: none;
+	}
+
+	&__item {
+		list-style: none;
+	}
+}
+
+input {
+	margin-right: 1em;
+}
+
+form {
+	border: none;
+	border-bottom: 3px solid transparent;
+	width: 90%;
+	display: block;
+}
