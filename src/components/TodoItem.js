@@ -6,7 +6,7 @@ const TodoItem = ({ item, markComplete, delItem }) => {
     textDecoration: item.completed ? 'line-through' : 'none'
   }
 
-  const handleChange = () => { 
+  const handleChange = () => {
     markComplete(item.id);
   }
 
@@ -17,6 +17,8 @@ const TodoItem = ({ item, markComplete, delItem }) => {
   return (
     <div style={itemStyle} className="list__item">
       <p>
+        <button className="btn__del" key={item.id}
+          onClick={deleteItem}>❌</button>
         {item.completed ?
           <input
             type="checkbox"
@@ -32,9 +34,8 @@ const TodoItem = ({ item, markComplete, delItem }) => {
           />
         }
         {item.title}
+
       </p>
-      <button key={item.id}
-        onClick={deleteItem}>DELETE?</button>
     </div>
   )
 }

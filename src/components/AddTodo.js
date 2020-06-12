@@ -16,16 +16,13 @@ const AddTodo = () => {
 
   return (
     <form onSubmit={handleSubmit} className="list__add">
-      <input type="text"
+      <input class="form__input"
+        type="text"
         name="title"
         placeholder="Add todo..."
         value={title}
         onChange={e => setTitle(e.target.value)} />
-      <input
-        type="submit"
-        value="Submit"
-        className="btn"/>
-      </form>
+    </form>
   );
 }
 
