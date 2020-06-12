@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { TodoProvider } from './Context/index';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <TodoProvider>
     <App />
-  </React.StrictMode>,
+  </TodoProvider>,
   document.getElementById('root')
 );
 

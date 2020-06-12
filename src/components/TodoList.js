@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import TodoItem from '../components/TodoItem';
+import { TodoContext } from '../Context';
 
-const TodoList = ({ items, markComplete, delItem }) => {
+const TodoList = () => {
+  const appContext = useContext(TodoContext);
+  const { items, markComplete, delItem } = appContext;
+
   return (
     items.map((item => (
       <TodoItem

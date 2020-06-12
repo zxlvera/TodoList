@@ -1,6 +1,10 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import { TodoContext } from '../Context';
 
-const AddTodo = ({ addItem }) => {
+const AddTodo = () => {
+
+  const appContext = useContext(TodoContext);
+  const { addItem } = appContext;
 
   const [title, setTitle] = useState('');
 
