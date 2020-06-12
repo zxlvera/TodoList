@@ -16,7 +16,7 @@ const AddTodo = () => {
 
   return (
     <form onSubmit={handleSubmit} className="list__add">
-      <input class="form__input"
+      <input className="form__input"
         type="text"
         name="title"
         placeholder="Add todo..."
