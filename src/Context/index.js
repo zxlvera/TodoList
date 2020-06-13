@@ -28,6 +28,7 @@ const TodoProvider = (props) => {
       complete: false
     },
   ]
+  
   const getData = async () => {
     const response = await fetch('http://jsonplaceholder.typicode.com/users/1/todos');
     const data = await response.json();
