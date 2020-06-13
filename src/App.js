@@ -1,14 +1,14 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React from 'react';
 import AddTodo from './components/AddTodo';
 import TodoList from './components/TodoList';
 // import { v4 as uuid } from 'uuid';
-import './App.scss';
+// import './App.scss';
 
 const App = () => {
 
   return (
     <div className="container">
-      <h1>Todo List</h1>
+      <h1 className="header">Todo List with React</h1>
       <AddTodo />
       <TodoList />
     </div>

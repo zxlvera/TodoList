@@ -17,21 +17,15 @@ const TodoItem = ({ item, markComplete, delItem }) => {
   return (
     <div style={itemStyle} className="list__item">
       <p>
-        <button className="btn__del" key={item.id}
-          onClick={deleteItem}>❌</button>
+
+        <button className="btn__del"
+          onClick={deleteItem}><span>❌</span></button>
         {item.completed ?
-          <input
-            type="checkbox"
-            value={item.id}
-            onChange={handleChange}
-            checked={true} />
+          <button className="btn__done" key={item.id}
+            onClick={handleChange}><span>🌝</span></button>
           :
-          <input
-            type="checkbox"
-            value={item.id}
-            onChange={handleChange}
-            checked={false}
-          />
+          <button className="btn__done" key={item.id}
+            onClick={handleChange}><span>😫</span></button>
         }
         {item.title}
 
