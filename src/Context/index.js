@@ -10,10 +10,28 @@ const TodoProvider = (props) => {
     getData();
   }, []);
 
+  const funData = [
+    {
+      id: uuid(),
+      title: "Write some tasks here",
+      complete: false
+    },
+    
+    {
+      id: uuid(),
+      title: "Created by",
+      complete: false
+    },
+    {
+      id: uuid(),
+      title: "Vera @ github.com/zxlvera",
+      complete: false
+    },
+  ]
   const getData = async () => {
     const response = await fetch('http://jsonplaceholder.typicode.com/users/1/todos');
     const data = await response.json();
-    setItems(data);
+    setItems(funData,...data);
   }
 
   const addItem = (title) => {
